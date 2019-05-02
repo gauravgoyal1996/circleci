@@ -17,4 +17,5 @@ jobs:
       - image: circleci/golang:1.11.2 # the primary container, where your job's commands are run
     steps:
       - checkout # check out the code in the project directory
-      - run: echo "hello world" 
+      - run: go run hello.go
+      - run: curl 127.0.0.1:8080 
